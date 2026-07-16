@@ -8,11 +8,11 @@ class Solution:
         # activation Methods :
 
         # ReLu
-        def relu(z :float = 0)->float:
-            return max(0,z)
+        def relu(z :float = 0.0)->float:
+            return max(0.0,z)
         
         # sigmoid
-        def sigmoid(z: float = 0 )->float : 
+        def sigmoid(z: float = 0.0 )->float : 
             return 1/(1+np.exp(-z))
         ''' w = [W1,......Wn ]
                  * * * * * *
@@ -34,7 +34,7 @@ class Solution:
         output :float = relu(input) if activation == "relu" else sigmoid(input)
 
 
-        return float(round(output,5))
+        return (round(output,5))
 
 
 
