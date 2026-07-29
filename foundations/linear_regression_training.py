@@ -29,7 +29,7 @@ class Solution:
         for step in range(num_iterations):
 
             y_pred  :NDArray[np.float64] = self.get_model_prediction(X, initial_weights)
-            initial_weights = np.array([initial_weights[j] - self.learning_rate*self.get_derivative(y_pred , Y , N , X,j) for j in range(M)])
+            initial_weights = [initial_weights[j] - self.learning_rate*self.get_derivative(y_pred , Y , N , X,j) for j in range(M)]
             
         return np.round(initial_weights,5) 
        
